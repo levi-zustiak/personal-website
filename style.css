@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about {
+  height: 50vh;
+  margin: 0;
+}
+
+#about h2 {
+  margin: 0;
+}
+
+.card {
+  border-radius: 25px;
+  box-shadow: -5px 5px 0px #5995ED, 10px -5px 25px rgba(229, 229, 229, 0.25);
+}
+
+#aboutCard {
+  height: 350px;
+  width: 400px;
+}
