@@ -1,3 +1,27 @@
+@font-face {
+  font-family: Nexa-Bold;
+  src: url('fonts/NexaBold.woff2') format('woff2'),
+        url('fonts/NexaBold.woff') format('woff'),
+        url('fonts/NexaBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Nexa-Light;
+  src: url('fonts/NexaLight.woff2') format('woff2'),
+        url('fonts/NexaLight.woff') format('woff'),
+        url('fonts/NexaLight.ttf') format('truetype');
+}
+
+:root {
+  --blue: #5995ED;
+  --green: #78F7A9;
+  --lightgrey: #E5E5E5;
+  --white: #fff;
+  --black: #282828;
+}
+
+p { font-family: Nexa-Light;}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,110 +32,100 @@ body {
   padding: 0;
 }
 
-.container {
-  background-color: pink;
-  max-width: 60vw;
+html {
+  font-family: Nexa-Bold, sans-serif;
 }
 
-.center {
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  max-width: 1440px;
+  width: 100%;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  padding: 0 40px;
+}
+
+.blue-card {
+  padding: 32px 0;
+  box-shadow: -5px 5px 0px #5995ED, 10px -5px 25px rgba(229, 229, 229, 0.25);
+  border-radius: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-#home {
+.card-content h3 {
+  margin-bottom: 1.25rem;
+}
+
+.card-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#logo {
+.logo {
   position: fixed;
   top: 50px;
   left: 50px;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
-#tabBar {
-  display: flex;
-  justify-content: center;
+.develop {
+  color: var(--blue);
 }
 
-#about {
-  height: 75vh;
-  background-color: blue;
-  display: grid;
-  grid-template-columns: 500px auto 500px;
-  grid-template-rows: auto 50% auto;
+.design {
+  color: var(--green);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 500px auto 500px;
+.line {
+  height: 100px;
+  width: 5px;
+  border-radius: 5px;
+  background-color: var(--lightgrey);
+  margin: 0 5vw;
 }
 
-.textContent {
-  background-color: red;
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+.about {
+  margin: 15vh 0;
 }
 
-#aboutCard {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+.about-text {
+  padding: 25px 0;
+  grid-column: 2 / span 5;
 }
 
-.card {
-  box-shadow: -5px 5px 0px #5995ED, 10px -5px 25px rgba(229, 229, 229, 0.25);
-  border-radius: 25px;
+.about-text h2 {
+  margin-bottom: 1.25rem;
 }
 
-#projects {
-  height: 100vh;
-  background-color: red;
-  display: grid;
-  grid-template-columns: auto 20% 20% 20% 20% 20% auto;
+.languages {
+  grid-column: 8 / 10;
+  align-self: start;
+  height: 16rem;
 }
 
-.projectCard {
-  box-shadow: -5px 5px 0px #78F7A9, 10px -5px 25px rgba(229, 229, 229, 0.25);
-  border-radius: 25px;
-  grid-column: 3/5;
+.services {
+  grid-column: 10 / 12;
+  align-self: end;
 }
 
-#contact {
-  height: 100vh;
-  grid-template-rows: auto 20% 20% 20% auto;
-}
-
-#contactText {
-  background-color: blue;
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-#contactCard {
-  grid-column: 4/5;
-  grid-row: 2/5;
-}
-
-#contactSocials {
-  grid-column: 2/3;
-  grid-row: 4/5;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-
-}
-
-.socialButton {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
-  background-color: coral;
-}
-
-.socialButton:nth-child(2) {
-  margin: 0 25px;
+.project-img {
+  height: 100%;
 }
