@@ -126,6 +126,29 @@ html {
   align-self: end;
 }
 
-.project-img {
-  height: 100%;
+.project-heading {
+}
+
+.project-grid {
+  max-width: 1440px;
+  margin: 15vh 0;
+  padding: 0 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(496px, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.project-card {
+  display: flex;
+
+}
+
+.card-img {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.project-card-text {
+
 }
