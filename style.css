@@ -53,9 +53,9 @@ html {
   padding: 0 40px;
   margin: 6rem 0;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
-  row-gap: 20rem;
+  row-gap: 5rem;
 }
 
 .blue-card {
@@ -78,9 +78,12 @@ html {
   padding: 0;
 }
 
+/*--- Landing Page ---*/
+
 .home {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -102,42 +105,43 @@ html {
 }
 
 .line {
-  height: 100px;
-  width: 5px;
+  height: 5px;
+  width: 3rem;
   border-radius: 5px;
   background-color: var(--lightgrey);
-  margin: 0 5vw;
+  margin: 5vh 0;
 }
+
+/*--- About ---*/
 
 .about-text {
   padding: 2rem 0;
-  grid-column: 2 / span 5;
+  grid-column: 1 / span 4;
   grid-row: 1 / auto;
   background-color: var(--white);
 }
 
 .about-cards {
   height: auto;
-  grid-column: 8 / span 4;
-  grid-row: 1 / auto;
+  grid-column: 1 / span 4;
+  grid-row: 2  / auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 }
 
 .languages {
-  align-self: start;
   height: 16rem;
 }
 
 .services {
-  align-self: end;
   height: 16rem;
+  margin: 5rem 0;
 }
 
 .projects {
-  grid-column: 2 / span 10;
-  grid-row: 2 / auto;
+  grid-column: 1 / span 4;
+  grid-row: 3 / auto;
 }
 
 .project-heading {
@@ -175,19 +179,19 @@ html {
 }
 
 .contact-text {
-  grid-column: 2 / span 5;
-  grid-row: 3 / auto;
+  grid-column: 1 / span 4;
+  grid-row: 4 / auto;
 }
 
 .contact-card {
-  height: 560px;
-  grid-column: 8 / span 4;
-  grid-row: 3 / auto;
+  height: 35rem;
+  grid-column: 1 / span 4;
+  grid-row: 5 / auto;
 }
 
 .socials {
-  grid-column: 2 / span 5;
-  grid-row: 3 / auto;
+  grid-column: 1 / span 4;
+  grid-row: 6 / auto;
   align-self: end;
   display: flex;
   justify-content: center;
@@ -204,4 +208,92 @@ html {
 .social-button:nth-child(2) {
   background-color: var(--green);
   margin: 0 2rem;
+}
+
+
+/*---- Mediaquery Breakpoints ----*/
+
+/* Ipads, Tablets */
+@media(min-width: 481px) {
+  .grid {
+    padding: 0 50px;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .home {
+    flex-direction: row;
+  }
+
+  .line {
+    height: 96px;
+    width: 5px;
+    margin: 0 5vw;
+  }
+
+  .about-text {
+    grid-column: 2 / span 6;
+  }
+
+  .about-cards {
+    grid-column: 2 / span 6;
+  }
+
+  .projects {
+    grid-column: 2 / span 6;
+  }
+
+  .contact-text {
+    grid-column: 2 / span 6;
+  }
+
+  .contact-card {
+    grid-column: 2 / span 6;
+  }
+
+  .socials {
+    grid-column: 2 / span 6;
+  }
+
+}
+
+/* Small Screens */
+@media (min-width: 769px) {
+
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 20rem;
+  }
+
+  .about-text {
+    grid-column: 2 / span 5;
+  }
+
+  .about-cards {
+    grid-column: 8 / span 4;
+    grid-row: 1 / auto;
+  }
+
+  .projects {
+    grid-column: 2 / span 10;
+    grid-row: 2 / auto;
+  }
+
+  .contact-text {
+    grid-column: 2 / span 5;
+    grid-row: 3 / auto;
+  }
+
+  .contact-card {
+    grid-column: 8 / span 4;
+    grid-row: 3 / auto;
+  }
+
+  .socials {
+    grid-column: 2 / span 5;
+    grid-row: 3 / auto;
+  }
 }
