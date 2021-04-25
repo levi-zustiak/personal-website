@@ -18,6 +18,8 @@
   --lightgrey: #E5E5E5;
   --white: #fff;
   --black: #282828;
+  --lightshadow: rgba(229, 229, 229, 0.25);
+  --darkshadow: rgba(229, 229, 229);
 }
 
 p { font-family: Nexa-Light;}
@@ -30,6 +32,8 @@ p { font-family: Nexa-Light;}
 body {
   margin: 0;
   padding: 0;
+  background-image: url('imgs/background-icons.svg');
+  background-size: 100% auto;
 }
 
 html {
@@ -46,20 +50,22 @@ html {
   max-width: 1440px;
   width: 100%;
   height: auto;
+  padding: 0 40px;
+  margin: 6rem 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
-  row-gap: 16rem;
-  padding: 0 40px;
+  row-gap: 20rem;
 }
 
 .blue-card {
   padding: 32px 0;
-  box-shadow: -5px 5px 0px var(--blue), 10px -5px 25px rgba(229, 229, 229, 0.25);
+  box-shadow: -5px 5px 0px var(--blue), 10px -5px 25px var(--lightshadow);
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--white);
 }
 
 .title {
@@ -104,9 +110,10 @@ html {
 }
 
 .about-text {
-  padding: 4rem 0;
+  padding: 2rem 0;
   grid-column: 2 / span 5;
   grid-row: 1 / auto;
+  background-color: var(--white);
 }
 
 .about-cards {
@@ -147,15 +154,16 @@ html {
 .project-card {
   display: flex;
   flex-direction: column;
-  box-shadow: -5px 5px 0px var(--green), 10px -5px 25px rgba(229, 229, 229, 0.25);
-  border-radius: 15px;
+  box-shadow: -5px 5px 0px var(--green), 10px -5px 25px var(--lightshadow);
+  border-radius: 1rem;
+  background-color: white;
 }
 
 .card-img {
   max-height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px 15px 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .project-card-text {
@@ -173,7 +181,27 @@ html {
 
 .contact-card {
   height: 560px;
-  border: 1px solid red;
   grid-column: 8 / span 4;
   grid-row: 3 / auto;
+}
+
+.socials {
+  grid-column: 2 / span 5;
+  grid-row: 3 / auto;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: var(--blue);
+  box-shadow: -10px 10px 20px var(--darkshadow);
+}
+
+.social-button:nth-child(2) {
+  background-color: var(--green);
+  margin: 0 2rem;
 }
