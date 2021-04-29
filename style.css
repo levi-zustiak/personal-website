@@ -43,7 +43,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 { font-size: 4rem;}
+h1 { font-size: 2.5rem; }
 
 .centered {
   display: flex;
@@ -175,7 +175,7 @@ h1 { font-size: 4rem;}
   max-width: 350px;
   border-radius: 250px;
   position: absolute;
-  /* filter: drop-shadow(-5px 10px 15px #d9d9d9); */
+  filter: drop-shadow(-10px 10px 15px rgba(0,0,0,.15));
   trasform: translateY(-25px);
   z-index: 2;
   right: 0;
@@ -205,15 +205,20 @@ h1 { font-size: 4rem;}
   grid-column: 2 / span 10;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 3.5rem;
+  grid-gap: 2rem;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  box-shadow: -5px 5px 0px var(--green), 10px -5px 25px var(--lightshadow);
   border-radius: 1rem;
   background-color: white;
+  transition: transform 0.25s ease-in-out, box-shadow .25s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translate(7.5px, -7.5px);
+  box-shadow: -7.5px 7.5px 0 var(--green), 10px -5px 25px var(--lightshadow);
 }
 
 .card-img {
