@@ -18,7 +18,7 @@
   --lightgrey: #E5E5E5;
   --white: #fff;
   --black: #282828;
-  --lightshadow: rgba(229, 229, 229, 0.25);
+  --lightshadow: -5px 5px 20px 5px rgba(229, 229, 229, .75);
   --darkshadow: rgba(229, 229, 229);
 }
 
@@ -36,6 +36,11 @@ body {
   background-size: auto;
   background-position: center;
   scroll-behavior: smooth;
+  transition: overflow 0s linear 2s;
+}
+
+.scrollLock {
+  overflow: hidden;
 }
 
 html {
@@ -43,7 +48,16 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 { font-size: 2.5rem; }
+h1 { font-size: 3rem; }
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+li {
+  list-style: none;
+}
 
 .centered {
   display: flex;
@@ -78,7 +92,7 @@ h1 { font-size: 2.5rem; }
 
 .blue-card {
   padding: 2rem 0;
-  box-shadow: -5px 5px 0px var(--blue), 10px -5px 25px var(--lightshadow);
+  box-shadow: -5px 5px 0px var(--blue), var(--lightshadow);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -94,6 +108,93 @@ h1 { font-size: 2.5rem; }
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 1rem;
+}
+
+/*--- Menu ---*/
+.menu {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  transition: 500ms ease-in-out;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.menu li {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  transition: transform 200ms ease-in-out;
+}
+
+.menu li:hover {
+  transform: scale(1.1);
+}
+
+.menuToggle {
+  width: 100vw;
+  visibility: visible;
+}
+
+.menuClose.menu-top {
+  animation: animateCloseTop 500ms backwards;
+  animation-direction: reverse;
+}
+
+.menuClose.menu-btm {
+  animation: animateCloseBtm 500ms backwards;
+  animation-direction: reverse;
+}
+
+.menuOpen.menu-top {
+    animation: animateTop 500ms forwards;
+}
+
+.menuOpen.menu-btm {
+    animation: animateBtm 500ms forwards;
+}
+
+@keyframes animateCloseTop {
+  0%{transform: translateY(0) rotate(0deg);}
+  50%{transform: translateY(8px) rotate(0deg);}
+  100%{transform: translateY(8px) rotate(135deg);}
+}
+
+@keyframes animateCloseBtm {
+  0%{transform: translateY(0) rotate(0deg);}
+  50%{transform: translateY(-8px) rotate(0deg);}
+  100%{transform: translateY(-8px) rotate(45deg);}
+}
+
+@keyframes animateTop {
+  0%{transform: translateY(0) rotate(0deg);}
+  50%{transform: translateY(8px) rotate(0deg);}
+  100%{transform: translateY(8px) rotate(135deg);}
+}
+
+@keyframes animateBtm {
+  0%{transform: translateY(0) rotate(0deg);}
+  50%{transform: translateY(-8px) rotate(0deg);}
+  100%{transform: translateY(-8px) rotate(45deg);}
 }
 
 /*--- Landing Page ---*/
@@ -124,18 +225,26 @@ h1 { font-size: 2.5rem; }
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 2;
 }
 
 .menu-button:hover {
   cursor: pointer;
 }
 
+.menu-button:hover div {
+  background-color: var(--blue);
+}
+
 .menu-button > div {
   width: 100%;
   height: 5px;
-  background-color: var(--blue);
+  background-color: var(--lightgrey);
   border-radius: 6px;
+  transition: background-color 250ms ease-in-out;
+  transform-origin: center;
 }
+
 
 .left-item {
   color: var(--blue);
@@ -164,30 +273,27 @@ h1 { font-size: 2.5rem; }
 
 .profile-div {
   width: 100%;
-  height: 500px;
-  max-width: 500px;
+  height: 350px;
   position: relative;
 }
 
 .profile-img {
   width: 100%;
   height: auto;
-  max-width: 350px;
   border-radius: 250px;
   position: absolute;
   filter: drop-shadow(-10px 10px 15px rgba(0,0,0,.15));
-  trasform: translateY(-25px);
-  z-index: 2;
+  transform: translateY(-25px);
   right: 0;
+  max-width: 350px;
 }
 
 .profile-background {
   height: auto;
   width: 100%;
   position: absolute;
-  right: 0;
-  /* transform: translateY(-300px); */
-  z-index: 1;
+  max-width: 450px;
+  right: 2rem;
 }
 
 /*--- Projects ---*/
@@ -195,6 +301,7 @@ h1 { font-size: 2.5rem; }
 .projects {
   grid-column: 1 / span 4;
   grid-row: 2;
+  background-color: grey;
 }
 
 .project-heading {
@@ -206,6 +313,16 @@ h1 { font-size: 2.5rem; }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 2rem;
+  transition: opacity 300ms ease-in-out;
+}
+
+.hide-projects {
+  display: none;
+}
+
+.project-fade {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
 }
 
 .project-card {
@@ -218,7 +335,11 @@ h1 { font-size: 2.5rem; }
 
 .project-card:hover {
   transform: translate(7.5px, -7.5px);
-  box-shadow: -7.5px 7.5px 0 var(--green), 10px -5px 25px var(--lightshadow);
+  box-shadow: -7.5px 7.5px 0 var(--green), var(--lightshadow);
+}
+
+.project-card:hover:nth-child(even) {
+  box-shadow: -7.5px 7.5px 0 var(--blue), var(--lightshadow);
 }
 
 .card-img {
@@ -228,14 +349,66 @@ h1 { font-size: 2.5rem; }
   border-radius: 1rem;
 }
 
-.project-card-text {
-  padding: 1.5rem;
+
+
+.modal-card {
+  background-color: var(--white);
+  display: none;
+  opacity: 0;
+  grid-template-columns: 1fr;
+  row-gap: 0.75rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: -5px 5px 25px 2.5px rgba(220,220,220,0.5);
 }
 
-.project-card-text h3 {
-  margin-bottom: .5rem;
+.heading {
+  grid-row: 1;
+  align-self: center;
 }
 
+.close-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.33rem;
+  background-color: var(--blue);
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+}
+
+.subheading {
+  grid-row: 2;
+}
+
+.modal-card p {
+  margin-top: 0.5rem;
+  grid-column: 1/3;
+  grid-row: 4;
+}
+
+.modal-card a {
+  grid-row: 5;
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+
+.modal-card a:hover {
+  color: var(--green);
+}
+
+.project-fade-out {
+
+}
+
+.project-fade-in {
+}
+
+.modal-transition {
+  opacity: 1;
+  display: grid;
+}
 
 /*--- Contact ---*/
 .contact {
@@ -269,7 +442,7 @@ h1 { font-size: 2.5rem; }
 /*---- Mediaquery Breakpoints ----*/
 
 /* Ipads, Tablets */
-@media(min-width: 481px) {
+@media (min-width: 481px) {
   .grid {
     padding: 0 50px;
     grid-template-columns: repeat(8, 1fr);
@@ -323,7 +496,13 @@ h1 { font-size: 2.5rem; }
 }
 
 @media (max-width: 1171px) {
-  .profile-div {
-    justify-self: center;
+  .profile-img {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .profile-background {
+    left: 50%;
+    transform: translate(-66%, 0);
   }
 }
