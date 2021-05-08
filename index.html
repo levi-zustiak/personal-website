@@ -22,141 +22,161 @@
       <div class="menuBar menu-btm"></div>
     </div>
     <h1 class="left-item">Levi</h1>
-    <div class="line"></div>
     <h1 class="right-item">Zustiak</h1>
   </div>
 
-  <div class="centered">
-    <div class="grid">
   <!--//// About ////-->
-  <div id="about" class="about content-grid">
-    <div class="about-text content-text">
-      <h2 class="title">About Me</h2>
-      <p>My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I first began my journey into software development creating and designing websites back in high school (obviously not very well). My passion for creating turned toward software development where I have found myself ever since. I attended Southwest Baptist University in Bolivar, Missouri, where I obtained a bachelor’s in Computer Science.</p><br>
-      <p>I am a back-end developer and very comfortable in front-end development. I bring my desire to learn and passion for creating to anything I can get my hands on. I hope to find a job I can learn and develop as a developer and in turn, provide my skills and abilities for the company.</p>
-    </div>
+  <div id="about" class="about-container flex">
+    <div class="grid">
+      <div class="about content-grid">
+        <div class="about-text content-text">
+          <h2 class="title">About Me</h2>
+          <p>My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I first began my journey into software development creating and designing websites back in high school (obviously not very well). My passion for creating turned toward software development where I have found myself ever since. I attended Southwest Baptist University in Bolivar, Missouri, where I obtained a bachelor’s in Computer Science.</p><br>
+          <p>I am a back-end developer and very comfortable in front-end development. I bring my desire to learn and passion for creating to anything I can get my hands on. I hope to find a job I can learn and develop as a developer and in turn, provide my skills and abilities for the company.</p>
+        </div>
 
-    <div class="profile-div">
+        <div class="profile-div">
 
-      <svg class="profile-background" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-<path fill="#5995ED" d="M30.5,-49.1C43.3,-45.5,59.9,-44.9,68.4,-37.2C76.9,-29.5,77.2,-14.7,77,-0.1C76.8,14.5,76.2,29.1,67.8,36.9C59.4,44.8,43.4,46.1,30.8,55.2C18.2,64.3,9.1,81.3,-2,84.7C-13,88.1,-26,77.8,-38.3,68.6C-50.7,59.3,-62.3,51,-67,39.7C-71.8,28.5,-69.5,14.2,-65.6,2.3C-61.7,-9.7,-56.1,-19.5,-50.3,-28.7C-44.4,-38,-38.3,-46.9,-29.9,-53C-21.4,-59.1,-10.7,-62.6,-0.9,-61C8.9,-59.4,17.8,-52.8,30.5,-49.1Z" transform="translate(100 100)" />
-</svg>
+          <svg class="profile-background" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#5995ED" d="M30.5,-49.1C43.3,-45.5,59.9,-44.9,68.4,-37.2C76.9,-29.5,77.2,-14.7,77,-0.1C76.8,14.5,76.2,29.1,67.8,36.9C59.4,44.8,43.4,46.1,30.8,55.2C18.2,64.3,9.1,81.3,-2,84.7C-13,88.1,-26,77.8,-38.3,68.6C-50.7,59.3,-62.3,51,-67,39.7C-71.8,28.5,-69.5,14.2,-65.6,2.3C-61.7,-9.7,-56.1,-19.5,-50.3,-28.7C-44.4,-38,-38.3,-46.9,-29.9,-53C-21.4,-59.1,-10.7,-62.6,-0.9,-61C8.9,-59.4,17.8,-52.8,30.5,-49.1Z" transform="translate(100 100)" />
+    </svg>
 
-      <img src="imgs/Profile.png" alt="Levi Zustiak" class="profile-img" />
+          <img src="imgs/Profile.png" alt="Levi Zustiak" class="profile-img" />
+        </div>
+      </div>
     </div>
   </div>
 
 
-  <!--//// Projects ////-->
-  <div id="projects" class="projects">
+    <!--//// Projects ////-->
+  <div id="projects" class="project-container flex">
+    <div class="grid">
+      <div class="project-content">
+        <h2 class="title project-heading">Projects</h2>
 
-    <h2 class="title project-heading">Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="imgs/react-logo.png" alt="Project image" class="card-img"/>
+            <div class="card-img">
 
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/html5.png" alt="Project image" class="card-img"/>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/js-logo.png" alt="Project image" class="card-img"/>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/js-logo.png" alt="Project image" class="card-img"/>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/react-logo.png" alt="Project image" class="card-img"/>
+          </div>
+
+          <div class="project-card">
+            <img src="imgs/react-logo.png" alt="Project image" class="card-img"/>
+          </div>
+        </div>
+
+        <div class="modal-card">
+          <div class="modal-headings">
+            <h3 class="heading modal-heading">Senior Project</h3>
+            <p class="subheading">web application</p>
+          </div>
+          <div class="close-button" ></div>
+          <div class="problem-container">
+            <h4 class="modal-heading">Problem</h4>
+            <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          </div>
+          <div class="solution-container">
+            <h4 class="modal-heading">Solution</h4>
+            <p>
+              <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+            </p>
+          </div>
+          <a href="#" class="modal-link">View project</a>
+        </div>
+
+        <div class="modal-card">
+          <h3 class="heading">Project 2</h3>
+          <div class="close-button" ></div>
+          <h4 class="subheading">web application</h4>
+          <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          <a href="#" class="modal-link">View project</a>
+        </div>
+
+        <div class="modal-card">
+          <h3 class="heading">Project 2</h3>
+          <div class="close-button" ></div>
+          <h4 class="subheading">web application</h4>
+          <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          <a href="#" class="modal-link">View project</a>
+        </div>
+
+        <div class="modal-card">
+          <h3 class="heading">Project 3</h3>
+          <div class="close-button" ></div>
+          <h4 class="subheading">web application</h4>
+          <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          <a href="#" class="modal-link">View project</a>
+        </div>
+
+        <div class="modal-card">
+          <h3 class="heading">Project 4</h3>
+          <div class="close-button" ></div>
+          <h4 class="subheading">web application</h4>
+          <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          <a href="#" class="modal-link">View project</a>
+        </div>
+
+        <div class="modal-card">
+          <h3 class="heading">Project 5</h3>
+          <div class="close-button" onclick=""></div>
+          <h4 class="subheading">web application</h4>
+          <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
+          <a href="#" class="modal-link">View project</a>
+        </div>
       </div>
-
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
-      </div>
-
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
-      </div>
-
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
-      </div>
-
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
-      </div>
-
-      <div class="project-card">
-        <img src="imgs/project-image.png" alt="Project image" class="card-img"/>
-      </div>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Senior Project</h2>
-      <div class="close-button" ></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Project 2</h2>
-      <div class="close-button" ></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Project 2</h2>
-      <div class="close-button" ></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Project 3</h2>
-      <div class="close-button" ></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Project 4</h2>
-      <div class="close-button" ></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
-    </div>
-
-    <div class="modal-card">
-      <h2 class="heading">Project 5</h2>
-      <div class="close-button" onclick=""></div>
-      <h4 class="subheading">web application</h4>
-      <p>Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.</p>
-      <a href="#" class="modal-link">View project</a>
     </div>
   </div>
 
 
   <!--//// Contact ////-->
-  <div id="contact" class="contact content-grid">
-    <div class="contact-text content-text">
-      <h2 class="title">Contact</h2>
-      <p>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+  <div id="contact" class="contact flex">
+    <div class="grid">
+      <div class="content-grid">
+        <div class="contact-text content-text">
+          <h2 class="title">Contact</h2>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="contact-card">
+          <form action="https://formsubmit.co/lzustiak98@gmail.com" method="POST">
+            <div class="form-item">
+              <label for="name">Name</label><br />
+              <input type="text" autocomplete="off" name="name" required/><br />
+            </div>
+            <div class="form-item">
+              <label for="email">Email</label><br />
+              <input type="text" autocomplete="off" name="email" required/><br />
+            </div>
+            <div class="form-item">
+              <label for="message">Message</label><br />
+              <textarea type="text" rows="6" autocomplete="off" name="message" required class="message"></textarea>
+            </div>
+
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="contact-card blue-card">
-      <form action="https://formsubmit.co/lzustiak98@gmail.com" method="POST">
-        <label for="fname">First</label><br />
-        <input type="text" name="fname"/><br />
-        <label for="lname">Last</label><br />
-        <input type="text" name="lname"/ /><br/>
-        <label for="email">Email</label><br />
-        <input type="text" name="email"/ /><br />
-        <label for="message">Message</label><br />
-        <input type="text" name="message" /><br />
-        <input type="submit" value="submit" />
-      </form>
-    </div>
-    <!-- <div class="socials">
-      <div class="social-button"></div>
-      <div class="social-button"></div>
-      <div class="social-button"></div>
-    </div> -->
   </div>
-</div>
-</div>
   <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 </html>
