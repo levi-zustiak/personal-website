@@ -1,0 +1,34 @@
+mixin project-card(imgLink)
+  .project-card
+    img.card-img(src= imgLink alt='Project image')
+
+mixin modal-card()
+  .modal-card
+    .modal-headings
+      h3.heading.modal-heading
+      p.subheading
+    .close-button.flex
+      img.close-icon(src='imgs/x-icon.svg')
+    .problem-container
+      h4.modal-heading Problem
+      p.problem
+    .solution-container
+      h4.modal-heading Solution
+      p.solution 
+    a.modal-link(href='') View Project
+
+mixin about-card(className, imgLink, title, titleP, heading1, para1, heading2, para2, heading3, para3)
+  .card(class=className)
+    img.about-img(src= imgLink)
+    .card-title
+      h3.card-heading #{title}
+      p #{titleP}
+    .card-section1
+      h4.card-heading #{heading1}
+      p #{para1}
+    .card-section2
+      h4.card-heading #{heading2}
+      p #{para2}
+    .card-section3
+      h4.card-heading #{heading3}
+      p #{para3}
