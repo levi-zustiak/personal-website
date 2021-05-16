@@ -72,7 +72,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url('imgs/mobile-background.svg') repeat center center fixed; */
+  padding-top: 10vh;
 }
 
 .grid {
@@ -109,6 +109,25 @@ li {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/*--- Loading ---*/
+#loading-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: 5;
+  animation: loading ease-in-out;
+  visibility: visible;
+}
+
+@keyframes loading {
+  from { visibility: visible; }
+  to { visibility: hidden; }
 }
 
 /*--- Menu ---*/
@@ -190,6 +209,9 @@ li {
 }
 
 /*--- Landing Page ---*/
+#home {
+  padding: 0;
+}
 
 .home {
   height: 100vh;
@@ -199,7 +221,7 @@ li {
 .logo {
   position: fixed;
   top: 50px;
-  left: 50px;
+  left: 30px;
   height: 40px;
   width: 40px;
   z-index: 2;
@@ -222,7 +244,7 @@ li {
 .menu-button {
   position: fixed;
   top: 50px;
-  right: 50px;
+  right: 30px;
   height: 3rem;
   width: 3.5rem;
   padding: .5rem;
@@ -275,7 +297,7 @@ li {
 }
 
 .arrow-container {
-  width: 2rem;
+  width: 1.5rem;
   height: auto;
   position: absolute;
   bottom: 7.5vh;
@@ -290,14 +312,14 @@ li {
 /*--- About ---*/
 
 .about-container {
-  background-image: none;
   width: 100vw;
-  padding: 20vh 0;
+  padding: 10vh 0;
   background-color: rgba(249, 250, 252, 0.9);
 }
 
 .about-text {
   background-color: transparent;
+  grid-column: 1/ span 4;
 }
 
 .about-text p {
@@ -310,18 +332,20 @@ li {
 
 #about-cards {
   width: 100vw;
+  padding: 0;
+  margin-bottom: -3rem;
 }
 
 .about-cards {
-  transform: translateY(-5%);
+  transform: translateY(-3rem);
   grid-column: 1 / span 4;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 5rem;
+  grid-gap: 2rem;
 }
 
 .card {
-  padding: 2.5rem;
+  padding: 2rem 2.5rem 3rem 2.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -350,10 +374,8 @@ li {
 }
 
 /*--- Projects ---*/
-
 .project-container {
   width: 100vw;
-  padding: 5rem 0;
 }
 
 .project-content {
@@ -433,6 +455,9 @@ li {
 }
 
 .close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2rem;
   height: 2rem;
   border-radius: 0.33rem;
@@ -480,9 +505,12 @@ li {
 }
 
 /*--- Contact ---*/
+#contact {
+}
+
 .contact {
-  padding: 20vh 0 15vh 0;
   width: 100vw;
+  padding: 10vh 0 5vh 0;
 }
 
 .contact .content-grid {
@@ -533,11 +561,16 @@ input[type=text] {
   padding: 0 0.5rem;
   font-size: 1rem;
   font-family: nexa-light;
+  outline: none;
 }
 
 input[type=text]:focus {
   border: 2px solid var(--green);
   color: black;
+}
+
+#email:focus {
+  border: 2px solid var(--blue);
 }
 
 input[type=submit] {
@@ -564,6 +597,7 @@ input[type=submit]:hover {
   outline: none;
   color: var(--darkgrey);
   margin-top: 3px;
+  outline: none;
 }
 
 .message:focus {
@@ -588,17 +622,24 @@ input[type=submit]:hover {
     flex-direction: row;
   }
 
+  .logo {
+    left: 50px;
+  }
+
+  .menu-button {
+    right: 50px;
+  }
+
   .content-grid {
     grid-column: 2 / span 6;
   }
 
-  .about-container {
-    background-image: none;
+  .about-text {
+    grid-column: 2 / span 6;
   }
 
   .about-cards {
     grid-column: 2 / span 6;
-    transform: translateY(-10%);
   }
 
   .project-content {
@@ -617,11 +658,6 @@ input[type=submit]:hover {
   .content-grid {
     grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
   }
-
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 /* Desktops */
@@ -638,12 +674,20 @@ input[type=submit]:hover {
     grid-template-columns: repeat(12, 1fr);
   }
 
+  .flex {
+    padding-top: 20vh;
+  }
+
   .content-grid {
     grid-column: 2 / span 10;
   }
 
   .about-container {
-    background-image: none;
+    padding: 20vh 0;
+  }
+
+  .about-text {
+    grid-column: 4 / span 6;
   }
 
   .about-cards {
@@ -652,6 +696,10 @@ input[type=submit]:hover {
 
   .project-content {
     grid-column: 3 / span 8;
+  }
+
+  .contact {
+    padding: 20vh 0 10vh 0;
   }
 }
 

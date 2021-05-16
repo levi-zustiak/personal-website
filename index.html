@@ -4,7 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Levi Zustiak</title>
   <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+  <link rel="icon" href="imgs/icon.svg">
 </head>
+<div id="loading-container">
+  <h2>Loading</h2>
+</div>
 <div class="menu-button" id="menu-button">
   <div class="menuBar menu-top"></div>
   <div class="menuBar menu-btm"></div>
@@ -30,11 +34,9 @@
 <!--  About //-->
 <div class="about-container flex" id="about">
   <div class="grid">
-    <div class="about content-grid">
-      <div class="about-text content-text">
-        <h2 class="title">About Me</h2>
-        <p>My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I have been a developer for four years and a graphic designer for three. I love anything regarding software development and graphic design. If you'd like to talk shop, feel free to contact me!</p><a class="about-link" href="#contact">Contact Me</a>
-      </div>
+    <div class="about-text content-text">
+      <h2 class="title">About Me</h2>
+      <p>My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I have been a developer for four years and a graphic designer for three. I love anything regarding software development and graphic design. If you'd like to talk shop, feel free to contact me!</p><a class="about-link" href="#contact">Contact Me</a>
     </div>
   </div>
 </div>
@@ -98,7 +100,7 @@
           <h3 class="heading modal-heading"></h3>
           <p class="subheading"></p>
         </div>
-        <div class="close-button flex"><img class="close-icon" src="imgs/x-icon.svg"/></div>
+        <div class="close-button"><img class="close-icon" src="imgs/x-icon.svg"/></div>
         <div class="problem-container">
           <h4 class="modal-heading">Problem</h4>
           <p class="problem"></p>
@@ -117,17 +119,17 @@
     <div class="content-grid">
       <div class="contact-text content-text">
         <h2 class="title">Contact</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Have questions about myself or a project? Send me a message and I’ll get back to you shortly. I’d love to talk with you about anything and everything development or design related!</p>
       </div>
       <div class="contact-card">
         <form action="https://formsubmit.co/lzustiak98@gmail.com" method="POST">
           <div class="form-item">
             <label for="name">Name</label><br>
-            <input type="text" autocomplete="off" name="name" required=""><br>
+            <input class="name" type="text" autocomplete="off" name="name" required=""><br>
           </div>
           <div class="form-item">
             <label for="email">Email</label><br>
-            <input type="text" autocomplete="off" name="email" required=""><br>
+            <input id="email" type="text" autocomplete="off" name="email" required=""><br>
           </div>
           <div class="form-item">
             <label for="message">Message</label><br>

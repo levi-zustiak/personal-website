@@ -6,7 +6,12 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Levi Zustiak
   link(rel='stylesheet' type='text/css' title='Cool stylesheet' href='style.css')
+  link(rel='icon' href='imgs/icon.svg')
     
+    
+#loading-container
+  h2 Loading
+  
 #menu-button.menu-button
   .menuBar.menu-top
   .menuBar.menu-btm
@@ -35,11 +40,10 @@ nav.menu
 //  About //
 #about.about-container.flex
   .grid
-    .about.content-grid
-      .about-text.content-text
-        h2.title About Me
-        p My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I have been a developer for four years and a graphic designer for three. I love anything regarding software development and graphic design. If you'd like to talk shop, feel free to contact me!
-        a.about-link(href='#contact') Contact Me
+    .about-text.content-text
+      h2.title About Me
+      p My name is Levi Zustiak, and I am a software developer and graphic designer. I am a developer first and a graphic designer second. I have been a developer for four years and a graphic designer for three. I love anything regarding software development and graphic design. If you'd like to talk shop, feel free to contact me!
+      a.about-link(href='#contact') Contact Me
 #about-cards.flex
   .grid.about-grid
     .about-cards
@@ -69,19 +73,18 @@ nav.menu
     .content-grid
       .contact-text.content-text
         h2.title Contact
-        p
-          | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Have questions about myself or a project? Send me a message and I’ll get back to you shortly. I’d love to talk with you about anything and everything development or design related!
       .contact-card
         form(action='https://formsubmit.co/lzustiak98@gmail.com' method='POST')
           .form-item
             label(for='name') Name
             br
-            input(type='text' autocomplete='off' name='name' required='')
+            input.name(type='text' autocomplete='off' name='name' required='')
             br
           .form-item
             label(for='email') Email
             br
-            input(type='text' autocomplete='off' name='email' required='')
+            input#email(type='text' autocomplete='off' name='email' required='')
             br
           .form-item
             label(for='message') Message

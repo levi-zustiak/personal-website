@@ -1,0 +1,17 @@
+mixin project-card(imgLink)
+  div.project-card
+    img.card-img(src= imgLink alt='Project image')
+
+mixin modal-card(heading, subheading, problem, solution, link)
+  div.modal-card
+    div.modal-headings
+      h3.heading.modal-heading #{heading}
+      p.subheading #{subheading}
+    div.close-button
+    div.problem-container
+      h4.modal-heading Problem
+      p #{problem}
+    div.solution-container
+      h4.modal-heading Solution
+      p #{solution}
+    a.modal-link(href='#{link}') View project
