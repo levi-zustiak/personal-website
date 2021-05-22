@@ -1,22 +1,22 @@
 const project1 = {
-  heading: 'Senior Project 1',
+  heading: 'Senior Project',
   subheading: 'web application',
   problem: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
-  solution: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
+  solution: 'Our team created an application in asp.net core mvc using C# that leverages the Jira API to allow users to view, create, and edit tasks pertaining to their project boards.',
   link: '#',
 }
 const project2 = {
-  heading: 'Senior Project 2',
-  subheading: 'web application',
-  problem: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
-  solution: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
+  heading: 'Personal Website',
+  subheading: 'website',
+  problem: 'I needed a website to display information about myself as well as projects worked on and a place to contact me.',
+  solution: 'I designed my site in figma, then developed using Pug, css, and JS to create my website. I felt that actually coding is more benefical since I have full customizability and helps me learn a lot more.',
   link: '#',
 }
 const project3 = {
-  heading: 'Senior Project 3',
-  subheading: 'web application',
-  problem: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
-  solution: 'Create an asp.net core application that uses the Jira REST api to get and post issues to a jira board. Client wanted an application to allow their clients to view issues for their projects.',
+  heading: 'React Applications',
+  subheading: 'mobile application',
+  problem: 'In one of my classes, we built several mobile apps using react native. The material was helpful but not as current as it good be.',
+  solution: 'To build my knowledge in React, I decided to change some of the projects as well as add the more up to date items such as hooks.',
   link: '#',
 }
 const project4 = {
@@ -48,9 +48,9 @@ const projects = [
   project1,
   project2,
   project3,
-  project4,
-  project5,
-  project6
+  // project4,
+  // project5,
+  // project6
 ];
 const heading = document.querySelector('.modal-heading');
 const subheading = document.querySelector('.subheading');

@@ -25,10 +25,12 @@ nav.menu
       a.nav-link(href='#projects') Projects
     li
       a.nav-link(href='#contact') Contact
+    li
+      a.nav-link(href='Resume.pdf' target='_blank' rel='noopener noreferrer') Resume
             
 #home.home.flex
   .grid
-    img.logo(src='imgs/icon.svg' alt='Personal Logo')
+    img.logo(src='imgs/logo.svg' alt='Personal Logo')
     .home-container.content-grid    
       .landing-headings
         h1 Hi! I'm #[span.left Levi] #[span.right Zustiak]
@@ -57,11 +59,9 @@ nav.menu
     .project-content
       h2.title.project-heading Projects
       .project-grid
-        +project-card('imgs/react-logo.png')
+        //- +project-card('imgs/js-logo.png')
+        +project-card('imgs/csharp-logo.png')
         +project-card('imgs/html5.png')
-        +project-card('imgs/js-logo.png')
-        +project-card('imgs/js-logo.png')
-        +project-card('imgs/react-logo.png')
         +project-card('imgs/react-logo.png')
 
       +modal-card
